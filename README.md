@@ -1,6 +1,4 @@
-# ADTierGuard
-
-<img width="1024" height="1024" alt="ChatGPT Image Jan 1, 2026, 12_21_28 AM" src="https://github.com/user-attachments/assets/a1c05c17-87b9-41d6-b49e-ded0907773d2" />
+<img width="1024" height="1024" alt="adtierguard" src="https://github.com/user-attachments/assets/b51ed0a4-0542-44a1-a9a6-1cf68d2e054d" />
 
 **Enterprise Active Directory Tier Isolation Module**
 
