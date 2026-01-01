@@ -1,6 +1,4 @@
-# ADTierGuard
-
-**Enterprise Active Directory Tier Isolation Module v2.3.0**
+<img width="1024" height="1024" alt="adtierguard" src="https://github.com/user-attachments/assets/46bf3990-7cdc-4ec1-9f6b-ba2b1d11f519" />
 
 A comprehensive solution for Active Directory Tier 0/1 isolation using Kerberos Authentication Policies. Protects privileged accounts by restricting where they can authenticate.
 
@@ -615,7 +613,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgments
 
-- Based on [Kili69/TierLevelIsolation](https://github.com/Kili69/TierLevelIsolation)
 - Microsoft's [Securing Privileged Access](https://docs.microsoft.com/en-us/security/compass/privileged-access-strategy) guidance
 - [Kerberos Authentication Policies](https://docs.microsoft.com/en-us/windows-server/security/credentials-protection-and-management/authentication-policies-and-authentication-policy-silos)
 
