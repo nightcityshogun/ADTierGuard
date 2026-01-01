@@ -1,5 +1,7 @@
 # ADTierGuard
 
+<img width="1024" height="1024" alt="ChatGPT Image Jan 1, 2026, 12_21_28 AM" src="https://github.com/user-attachments/assets/a1c05c17-87b9-41d6-b49e-ded0907773d2" />
+
 **Enterprise Active Directory Tier Isolation Module**
 
 A pure ADSI (System.DirectoryServices) implementation for Active Directory Tier 0/1 isolation using Kerberos Authentication Policies. Zero dependency on the ActiveDirectory PowerShell module.
