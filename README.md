@@ -424,6 +424,8 @@ Invoke-TierComputerSync -ConfigurationPath .\Config\TierGuard.json -TierLevel 0 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
+
+- Based on [Kili69/TierLevelIsolation](https://github.com/Kili69/TierLevelIsolation)
 - Microsoft's [Securing Privileged Access](https://docs.microsoft.com/en-us/security/compass/privileged-access-strategy) guidance
 - [Kerberos Authentication Policies](https://docs.microsoft.com/en-us/windows-server/security/credentials-protection-and-management/authentication-policies-and-authentication-policy-silos)
 
