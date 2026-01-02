@@ -281,7 +281,6 @@ runas /user:DOMAIN\Tier0Admin cmd.exe
 ## Credits
 
 - Based on Microsoft's [Enterprise Access Model](https://docs.microsoft.com/en-us/security/compass/privileged-access-strategy)
-- Inspired by [TierLevelIsolation](https://github.com/Kili69/TierLevelIsolation) by Andreas Lucas (MSFT)
 - [Kerberos Authentication Policies](https://docs.microsoft.com/en-us/windows-server/security/credentials-protection-and-management/authentication-policies-and-authentication-policy-silos) documentation
 
 ## License
