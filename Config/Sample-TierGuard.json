@@ -1,0 +1,84 @@
+{
+  "_comment": "ADTierGuard v2.1.0 - Forest-Wide Tier Isolation Configuration",
+  "_description": "Domains are auto-discovered via Get-ForestInfo. No manual domain list needed.",
+  
+  "General": {
+    "ForestScope": true,
+    "ExcludeDomains": [],
+    "LogLevel": "Information",
+    "LogPath": "C:\\ADTierGuard\\Logs",
+    "EventLogSource": "ADTierGuard",
+    "MaxParallelOperations": 8,
+    "OperationTimeoutSeconds": 300
+  },
+  
+  "Tier0": {
+    "Enabled": true,
+    "AdminOUs": [
+      "OU=Users,OU=Tier0,OU=ADTierGuard"
+    ],
+    "ServiceAccountOUs": [
+      "OU=ServiceAccounts,OU=Tier0,OU=ADTierGuard"
+    ],
+    "ComputerOUs": [
+      "OU=DomainControllers,OU=Tier0,OU=ADTierGuard",
+      "OU=Servers,OU=Tier0,OU=ADTierGuard"
+    ],
+    "ComputerGroupName": "TG-Tier0-Computers",
+    "KerberosAuthPolicyName": "TG-Tier0-RestrictedAuth",
+    "AddToProtectedUsers": true,
+    "EnforcePrivilegedGroupCleanup": true,
+    "IncludeDomainControllers": true,
+    "ExcludedAccounts": [
+      "krbtgt",
+      "Administrator"
+    ]
+  },
+  
+  "Tier1": {
+    "Enabled": true,
+    "AdminOUs": [
+      "OU=Users,OU=Tier1,OU=ADTierGuard"
+    ],
+    "ServiceAccountOUs": [
+      "OU=ServiceAccounts,OU=Tier1,OU=ADTierGuard"
+    ],
+    "ComputerOUs": [
+      "OU=Servers,OU=Tier1,OU=ADTierGuard"
+    ],
+    "ComputerGroupName": "TG-Tier1-Computers",
+    "KerberosAuthPolicyName": "TG-Tier1-RestrictedAuth",
+    "AddToProtectedUsers": false,
+    "EnforcePrivilegedGroupCleanup": false,
+    "IncludeDomainControllers": false,
+    "ExcludedAccounts": []
+  },
+  
+  "ServiceAccount": {
+    "UseGMSA": true,
+    "GMSAName": "gMSA-TierGuard$",
+    "GMSAPrincipalsAllowed": "Domain Controllers"
+  },
+  
+  "Scheduling": {
+    "ComputerSyncIntervalMinutes": 10,
+    "UserSyncIntervalMinutes": 60,
+    "EnabledTasks": [
+      "Tier0-ComputerSync",
+      "Tier0-UserSync",
+      "Tier1-ComputerSync",
+      "Tier1-UserSync"
+    ]
+  },
+  
+  "Notifications": {
+    "SmtpServer": "",
+    "SmtpPort": 587,
+    "SmtpUseSsl": true,
+    "SmtpFrom": "",
+    "SmtpTo": [],
+    "NotifyOnError": true,
+    "NotifyOnSuccess": false,
+    "NotifyOnPolicyChange": true
+  }
+}
