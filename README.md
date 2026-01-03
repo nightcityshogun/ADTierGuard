@@ -1,5 +1,3 @@
-# ADTierGuard
-
 <img width="1024" height="1024" alt="adtierguard" src="https://github.com/user-attachments/assets/46bf3990-7cdc-4ec1-9f6b-ba2b1d11f519" />
 
 **Enterprise Active Directory Tier Isolation using Kerberos Authentication Policies**
@@ -280,7 +278,6 @@ runas /user:DOMAIN\Tier0Admin cmd.exe
 ## Credits
 
 - Based on Microsoft's [Enterprise Access Model](https://docs.microsoft.com/en-us/security/compass/privileged-access-strategy)
-- Inspired by [TierLevelIsolation](https://github.com/Kili69/TierLevelIsolation) by Andreas Lucas (MSFT)
 - [Kerberos Authentication Policies](https://docs.microsoft.com/en-us/windows-server/security/credentials-protection-and-management/authentication-policies-and-authentication-policy-silos) documentation
 
 ## License
