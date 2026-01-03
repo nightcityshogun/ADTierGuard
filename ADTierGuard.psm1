@@ -18,7 +18,7 @@
     
 .NOTES
     Module:      ADTierGuard
-    Author:      Enterprise Security Team
+    Author:      NCS Dojo
     Version:     2.0.0
     Requires:    Windows PowerShell 5.1 or PowerShell 7+
                  Domain Admin or Enterprise Admin privileges
@@ -687,3 +687,4 @@ Export-ModuleMember -Function @(
     'Get-TierUsers'
     'Test-TierEnvironment'
 )
+
