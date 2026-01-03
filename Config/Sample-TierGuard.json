@@ -1,0 +1,87 @@
+{
+  "_comment": "ADTierGuard Configuration - Enterprise AD Tier Isolation",
+  "_description": "Domains are auto-discovered. Edit OU paths to match your environment.",
+  "_version": "4.4",
+  
+  "General": {
+    "ForestScope": true,
+    "ExcludeDomains": [],
+    "LogLevel": "Information",
+    "LogPath": "C:\\ProgramData\\ADTierGuard\\Logs",
+    "EventLogSource": "ADTierGuard",
+    "MaxParallelOperations": 8,
+    "OperationTimeoutSeconds": 300
+  },
+  
+  "Tier0": {
+    "Enabled": true,
+    "AdminOUs": [
+      "OU=Users,OU=Tier 0,OU=ADTierGuard"
+    ],
+    "ServiceAccountOUs": [
+      "OU=Service Accounts,OU=Tier 0,OU=ADTierGuard"
+    ],
+    "ComputerOUs": [
+      "OU=Computers,OU=Tier 0,OU=ADTierGuard"
+    ],
+    "ComputerGroupName": "Tier0-Computers",
+    "KerberosAuthPolicyName": "Tier0-RestrictedAuth",
+    "AuthenticationSiloName": "Tier0-Silo",
+    "AddToProtectedUsers": true,
+    "EnforcePrivilegedGroupCleanup": true,
+    "IncludeDomainControllers": true,
+    "ExcludedAccounts": [
+      "krbtgt",
+      "Administrator"
+    ]
+  },
+  
+  "Tier1": {
+    "Enabled": true,
+    "AdminOUs": [
+      "OU=Users,OU=Tier 1,OU=ADTierGuard"
+    ],
+    "ServiceAccountOUs": [
+      "OU=Service Accounts,OU=Tier 1,OU=ADTierGuard"
+    ],
+    "ComputerOUs": [
+      "OU=Computers,OU=Tier 1,OU=ADTierGuard"
+    ],
+    "ComputerGroupName": "Tier1-Computers",
+    "KerberosAuthPolicyName": "Tier1-RestrictedAuth",
+    "AuthenticationSiloName": "Tier1-Silo",
+    "AddToProtectedUsers": false,
+    "EnforcePrivilegedGroupCleanup": false,
+    "IncludeDomainControllers": false,
+    "ExcludedAccounts": []
+  },
+  
+  "ServiceAccount": {
+    "UseGMSA": true,
+    "GMSAName": "ADTierGuard-svc",
+    "GMSAPrincipalsAllowed": "Domain Controllers"
+  },
+  
+  "GPO": {
+    "Name": "ADTierGuard Tier Isolation",
+    "LinkToAllDCOUs": true
+  },
+  
+  "Scheduling": {
+    "ComputerSyncIntervalMinutes": 10,
+    "UserSyncIntervalMinutes": 10,
+    "EnableComputerSyncOnInstall": true,
+    "EnableUserSyncOnInstall": false
+  },
+  
+  "Notifications": {
+    "SmtpServer": "",
+    "SmtpPort": 587,
+    "SmtpUseSsl": true,
+    "SmtpFrom": "",
+    "SmtpTo": [],
+    "NotifyOnError": true,
+    "NotifyOnSuccess": false,
+    "NotifyOnPolicyChange": true
+  }
+}
