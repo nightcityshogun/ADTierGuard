@@ -6,8 +6,8 @@
     
     # Author information
     Author            = 'Enterprise Security Team'
-    CompanyName       = 'Your Organization'
-    Copyright         = '(c) 2025. All rights reserved.'
+    CompanyName       = 'NCS Dojo'
+    Copyright         = '(c) 2025 NCS Dojo - All rights reserved.'
     
     # Module description
     Description       = @'
@@ -275,23 +275,6 @@ IMPROVEMENTS:
 
 Version 2.0.0 - Commercial Ready Release
 =========================================
-BREAKING CHANGES:
-- Refactored sync scripts to use shared SyncUtilities module
-- Renamed logging function to Write-SyncLog (was Write-Log)
-
-NEW FEATURES:
-- New SyncUtilities module for shared functionality
-- Thread-safe logging with file locking
-- Standardized result objects across sync operations
-- Enhanced summary formatting
-- Improved error handling with stack traces
-
-IMPROVEMENTS:
-- Eliminated all duplicate code between sync scripts
-- Commercial-grade code quality
-- Better separation of concerns
-- More comprehensive help documentation
-- UTC timestamps for consistency
 
 Version 1.0.0 - Initial Release
 ================================
@@ -321,3 +304,4 @@ Version 1.0.0 - Initial Release
     # Default command prefix
     DefaultCommandPrefix = ''
 }
+
